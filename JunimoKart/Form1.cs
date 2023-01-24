@@ -13,6 +13,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Junimo Kart
+ * Logan Gillett
+ * Mr. T
+ * 23.1.23
+ * ICS3U
+ */
+
 namespace JunimoKart
 {
     public partial class Form1 : Form
@@ -20,7 +28,12 @@ namespace JunimoKart
         public Form1()
         {
             InitializeComponent();
+
+            //plays title screen music on startup
+            //titleMusic.Play();
         }
+
+
 
         #region Variables
 
@@ -38,6 +51,15 @@ namespace JunimoKart
         bool controlsPageCheck = false;
 
         bool firstTimeSetup = true;
+
+        //Sounds
+        SoundPlayer flipSound = new SoundPlayer(Properties.Resources.pageFlipSound);
+        SoundPlayer coinSound = new SoundPlayer(Properties.Resources.coinNoise);
+        SoundPlayer dashSound = new SoundPlayer(Properties.Resources.dashNoise);
+
+        //Game Music Loops (Currently Not Being Used)
+        SoundPlayer titleMusic = new SoundPlayer(Properties.Resources.JunimoKartTitleMusic);
+        SoundPlayer gameMusic = new SoundPlayer(Properties.Resources.junimoKartGameMusic);
 
         #region Dash Mechanic Variables
 
@@ -180,6 +202,7 @@ namespace JunimoKart
                     if (!speedBoost.IsRunning && dashBarCheck == false)
                     {
                         speedBoost.Start();
+                        dashSound.Play();
                     }
                     break;
                 case Keys.Enter:
@@ -187,6 +210,9 @@ namespace JunimoKart
                     //wont run unless the game is not running
                     if (gameTimer.Enabled == false && controlsPageCheck == false)
                     {
+                        //stops the title music
+                        //titleMusic.Stop();
+
                         //starts the game loop
                         gameTimer.Enabled = true;
 
@@ -248,6 +274,9 @@ namespace JunimoKart
 
                         //sets the boolein that the if statements use to true so the code knows what screen is on
                         controlsPageCheck = true;
+
+                        //sound
+                        flipSound.Play();
                     }
                     else if (gameTimer.Enabled == false && controlsPageCheck == true)
                     {
@@ -280,6 +309,9 @@ namespace JunimoKart
 
                         //sets the boolein that the if statements use to false so the code knows what screen is on
                         controlsPageCheck = false;
+
+                        //sound
+                        flipSound.Play();
                     }
                     break;
             }
@@ -330,6 +362,9 @@ namespace JunimoKart
 
                 //stops the if statement from happening again
                 startUpVariable = true;
+
+                //plays the ingame music
+                //gameMusic.Play();
             }
 
             //track player's previous y position
@@ -374,8 +409,14 @@ namespace JunimoKart
             {
                 if (player.IntersectsWith(coins[i]))
                 {
+                    //removes coin from the list
                     coins.RemoveAt(i);
+
+                    //adds 5 to the player score
                     playerScore += 5;
+
+                    //plays coin sound
+                    coinSound.Play();
                 }
             }
 
@@ -891,9 +932,11 @@ namespace JunimoKart
             speedBoost.Reset();
             platformIncrease.Reset();
 
+            //plays the title screen music
+            //titleMusic.Play();
+
             //I don't have to reset any jump variables because they will reset themselves after a jump
             //You can never fall into the void mid jump so it is unnecessary
         }
-
     }
 }

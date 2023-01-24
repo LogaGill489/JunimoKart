@@ -149,5 +149,57 @@
   <ItemGroup>
     <None Include="Resources\My project-1 %2810%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\336932__the-sacha-rush__coin5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\222755__the-matt-freeman__book-sounds-big-page-flip-1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audiomass-output.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audiomass-output %281%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audiomass-output %282%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\521999__kastenfrosch__whoosh-dash %281%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\350872__cabled-mess__coin-c-01.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\269311__kwahmah-02__swoosh08.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audiomass-output %283%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Y2Mate.is - JunimoKart %28Title Theme%29-Ti6bZbSQ-M4-160k-1658197302415.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stardew-Valley-OST-Mines-_Star-Lumpy_.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -71,6 +71,24 @@ namespace JunimoKart.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream coinNoise {
+            get {
+                return ResourceManager.GetStream("coinNoise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream dashNoise {
+            get {
+                return ResourceManager.GetStream("dashNoise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap JunimoCart {
@@ -101,6 +119,24 @@ namespace JunimoKart.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream junimoKartGameMusic {
+            get {
+                return ResourceManager.GetStream("junimoKartGameMusic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream JunimoKartTitleMusic {
+            get {
+                return ResourceManager.GetStream("JunimoKartTitleMusic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap JunimoSign {
@@ -117,6 +153,15 @@ namespace JunimoKart.Properties {
             get {
                 object obj = ResourceManager.GetObject("orangeJunimo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream pageFlipSound {
+            get {
+                return ResourceManager.GetStream("pageFlipSound", resourceCulture);
             }
         }
         
