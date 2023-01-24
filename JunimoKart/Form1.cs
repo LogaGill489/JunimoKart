@@ -1,16 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
 using System.Media;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
@@ -32,8 +24,6 @@ namespace JunimoKart
             //plays title screen music on startup
             //titleMusic.Play();
         }
-
-
 
         #region Variables
 
@@ -164,6 +154,7 @@ namespace JunimoKart
         #endregion
 
         #endregion
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -178,13 +169,10 @@ namespace JunimoKart
                     jumpCheckCall();
                     break;
                 case Keys.S:
-                    for (int i = 0; i < platforms.Count; i++)
-                    {
-                        if (player.IntersectsWith(platforms[i]) && player.Y + player.Height - 5 <= platforms[i].Y)
-                        {
-                            player.Y += gravitySpeed;
-                        }
-                    }
+                    downCheckCall();
+                    break;
+                case Keys.Down:
+                    downCheckCall();
                     break;
                 case Keys.A:
                     aDown = true;
@@ -196,7 +184,7 @@ namespace JunimoKart
                     dDown = true;
                     break;
                 case Keys.Right:
-                    dDown= true;
+                    dDown = true;
                     break;
                 case Keys.ShiftKey:
                     if (!speedBoost.IsRunning && dashBarCheck == false)
@@ -265,6 +253,7 @@ namespace JunimoKart
 
                         //shows the controls labels
                         jumpLabel.Visible = true;
+                        downLabel.Visible = true;
                         leftLabel.Visible = true;
                         rightLabel.Visible = true;
                         dashLabel.Visible = true;
@@ -300,6 +289,7 @@ namespace JunimoKart
 
                         //removes the controls labels
                         jumpLabel.Visible = false;
+                        downLabel.Visible = false;
                         leftLabel.Visible = false;
                         rightLabel.Visible = false;
                         dashLabel.Visible = false;
@@ -676,6 +666,16 @@ namespace JunimoKart
                 heightCap.Stop();
             }
         }
+        public void downCheckCall()
+        {
+            for (int i = 0; i < platforms.Count; i++)
+            {
+                if (player.IntersectsWith(platforms[i]) && player.Y + player.Height - 5 <= platforms[i].Y)
+                {
+                    player.Y += gravitySpeed;
+                }
+            }
+        }
 
         #endregion
 
@@ -774,7 +774,7 @@ namespace JunimoKart
                     tempRandom = randGen.Next(3, 7);
                     break;
 
-                    //case that only occurs if a platform is generated in the void
+                //case that only occurs if a platform is generated in the void
                 case 14:
                     //check for a double gap, if not, then set the gap to the previous available height
                     if (platformHeight[9] < 12)
@@ -804,7 +804,7 @@ namespace JunimoKart
                         }
                     }
                     //sets the height to that of section 8's platform if there is a gap of two
-                    else if (platformHeight[8] < 12) 
+                    else if (platformHeight[8] < 12)
                     {
                         switch (platformHeight[8])
                         {
@@ -833,7 +833,7 @@ namespace JunimoKart
                         //tempRandom = platformHeight[8];
                     }
                     break;
-                    //standard generation if no special criteria is met
+                //standard generation if no special criteria is met
                 default:
                     tempRandom = randGen.Next(platformHeight[10] - 2, platformHeight[10] + 3);
                     break;
@@ -860,7 +860,7 @@ namespace JunimoKart
                 coins.Add(new Rectangle(platforms[11].X + 35, coinsRandom * 50 - 2, 30, 30));
             }
         }
-        
+
         #endregion
 
         public void gameOver()
