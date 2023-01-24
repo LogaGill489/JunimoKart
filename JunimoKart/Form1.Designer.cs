@@ -256,7 +256,7 @@
             this.pinkJunimoImage.BackgroundImage = global::JunimoKart.Properties.Resources.pinkJunimo;
             this.pinkJunimoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pinkJunimoImage.Location = new System.Drawing.Point(79, 67);
-            this.pinkJunimoImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pinkJunimoImage.Margin = new System.Windows.Forms.Padding(2);
             this.pinkJunimoImage.Name = "pinkJunimoImage";
             this.pinkJunimoImage.Size = new System.Drawing.Size(45, 41);
             this.pinkJunimoImage.TabIndex = 18;
@@ -269,7 +269,7 @@
             this.junimoImage.BackgroundImage = global::JunimoKart.Properties.Resources.yellowJunimo;
             this.junimoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.junimoImage.Location = new System.Drawing.Point(882, 494);
-            this.junimoImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.junimoImage.Margin = new System.Windows.Forms.Padding(2);
             this.junimoImage.Name = "junimoImage";
             this.junimoImage.Size = new System.Drawing.Size(45, 41);
             this.junimoImage.TabIndex = 15;
@@ -281,7 +281,7 @@
             this.junimoKartSignImage.BackgroundImage = global::JunimoKart.Properties.Resources.JunimoSign;
             this.junimoKartSignImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.junimoKartSignImage.Location = new System.Drawing.Point(79, 89);
-            this.junimoKartSignImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.junimoKartSignImage.Margin = new System.Windows.Forms.Padding(2);
             this.junimoKartSignImage.Name = "junimoKartSignImage";
             this.junimoKartSignImage.Size = new System.Drawing.Size(842, 296);
             this.junimoKartSignImage.TabIndex = 17;
@@ -293,7 +293,7 @@
             this.orangeJunimoImage.BackgroundImage = global::JunimoKart.Properties.Resources.orangeJunimo;
             this.orangeJunimoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.orangeJunimoImage.Location = new System.Drawing.Point(830, 67);
-            this.orangeJunimoImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.orangeJunimoImage.Margin = new System.Windows.Forms.Padding(2);
             this.orangeJunimoImage.Name = "orangeJunimoImage";
             this.orangeJunimoImage.Size = new System.Drawing.Size(45, 41);
             this.orangeJunimoImage.TabIndex = 19;
@@ -306,7 +306,7 @@
             this.blueJunimoImage.BackgroundImage = global::JunimoKart.Properties.Resources.blueJunimo;
             this.blueJunimoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.blueJunimoImage.Location = new System.Drawing.Point(882, 89);
-            this.blueJunimoImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.blueJunimoImage.Margin = new System.Windows.Forms.Padding(2);
             this.blueJunimoImage.Name = "blueJunimoImage";
             this.blueJunimoImage.Size = new System.Drawing.Size(45, 41);
             this.blueJunimoImage.TabIndex = 20;
@@ -332,7 +332,7 @@
             this.leftLabel.BackColor = System.Drawing.Color.Transparent;
             this.leftLabel.Font = new System.Drawing.Font("Rockwell", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leftLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.leftLabel.Location = new System.Drawing.Point(319, 269);
+            this.leftLabel.Location = new System.Drawing.Point(320, 193);
             this.leftLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.leftLabel.Name = "leftLabel";
             this.leftLabel.Size = new System.Drawing.Size(579, 50);
@@ -374,7 +374,7 @@
             this.downLabel.BackColor = System.Drawing.Color.Transparent;
             this.downLabel.Font = new System.Drawing.Font("Rockwell", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.downLabel.Location = new System.Drawing.Point(296, 193);
+            this.downLabel.Location = new System.Drawing.Point(294, 272);
             this.downLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.downLabel.Name = "downLabel";
             this.downLabel.Size = new System.Drawing.Size(579, 50);
@@ -417,7 +417,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "JunimoKart";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);

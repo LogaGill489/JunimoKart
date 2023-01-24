@@ -56,9 +56,7 @@ namespace JunimoKart
         //stopwatch to track total time in a dash
         Stopwatch speedBoost = new Stopwatch();
 
-        //boolein used for easy checks between when a dash is happening vs when one isn't
-        bool speedResetStopper = true;
-
+        //Brushes and Pens used for dash effect
         Brush blueBrush = new SolidBrush(Color.DarkCyan);
         Pen whitePen = new Pen(Color.White);
 
